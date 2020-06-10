@@ -46,7 +46,7 @@ body {
 .content main .input input {
     flex: 1;
     margin-left: 15px;
-    background: rgba(137, 43, 226, 0.253);
+    background: rgba(84, 150, 189, 0.253);
     border: none;
     border-radius: 8px 0 0 8px;
     outline: none;

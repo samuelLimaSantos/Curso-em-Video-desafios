@@ -1,25 +1,27 @@
+/** Seleciona todos os elementos de tela necessários para realizar o código */
 const button = document.querySelector(".input button");
 const selectElement = document.querySelector("select[name=table]");
 const input = document.querySelector("input[name = numero]");
 const result = document.querySelector(".resultado");
-let lista = [];
+let lista = []; // Criação da lista
 
 
 button.addEventListener("click", () => {
+    // Evento para adicionar elementos no array.
+
     result.innerHTML = ``;
     const inputValue = input.value;
     if (inputValue > 100 || inputValue < 0) {
         alert("Inserir valor entre 0 e 100!");
         return;
-    }
-
-    if (lista.indexOf(inputValue) > -1){
+    } else if (lista.indexOf(inputValue) > -1){
+        // No array não é permitido números repetidos
         alert("Valor já existente no array");
         return;
+    } else {
+        lista.push(inputValue); // Adiciona o elemento no array caso passe pelas validações
     }
 
-
-    lista.push(inputValue);
     selectElement.innerHTML += `<option value="${inputValue}">
     Valor ${inputValue} adicionado
     </option>`;
@@ -28,41 +30,39 @@ button.addEventListener("click", () => {
 
 
 function resultado() {
-
-    const total = lista.length;
-    result.innerHTML = `<p>Ao todo, temos ${total} números cadastrados</p>`;
+    // Função responsável por mostrar o resultado
     
-    let soma = 0;
-    let maior = 0;
-    let menor = 0;
-    let media = 0;
+    let listaAtualizada = lista.map((item) => Number(item)); // Transforma os arrays em tipo numérico
+    const total = listaAtualizada.length;
+    let maior;
+    let menor;
+    
 
     for (let i = 0; i < total; i++) {
+        // Descobre o maior e o menor número do vetor
         if (i === 0) {
-            maior = lista[i];
-            menor = lista[i];
-            console.log("caiu");
+            maior = listaAtualizada[i];
+            menor = listaAtualizada[i];
         }
-
-        if (lista[i] > maior) {
-            maior = lista[i];
-        }
-
-        if (lista[i] < menor) {
-            menor = lista[i];
-        }
-
-        soma += Number(lista[i]);
         
+        if (listaAtualizada[i] > maior) {
+            maior = listaAtualizada[i];
+        }
 
-        console.log("opa");
+        if (listaAtualizada[i] < menor) {
+            menor = listaAtualizada[i];
+        }
+    
     }
 
-    media = soma / total;
-
-    result.innerHTML += `<p>O maior valor informado foi ${maior}</p>
+    const soma = listaAtualizada.reduce((total, next) => total + next);
+    const media = soma / listaAtualizada.length;
+        
+    result.innerHTML = `
+    <p>Ao todo, temos ${total} números cadastrados</p>
+    <p>O maior valor informado foi ${maior}</p>
     <p>O menor valor informado foi ${menor}</p>
     <p>Somando todos os valores, temos ${soma}</p>
     <p>A média dos valores digitados é ${media}</p>
-    `;
+    `; 
 }
