@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(99, 99, 196);
+}
+
+#titulo {
+    text-align: center;
+    font: bolder arial;
+    font-size: 40px;
+    color: white;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.363);
+}
+
+section {
+    font-size: 20px;
+    background: white;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.26);
+    padding: 30px 10px 20px 20px;
+    margin: auto;
+}
+
+#inicio, #fim, #passo{
+    margin-bottom: 20px;
+}
+
+#final {
+    display: flex;
+    align-items: center;    
+}
+
+#visual {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
+
+
+
+footer {
+    text-align: center;
+    color: white;
+}
+

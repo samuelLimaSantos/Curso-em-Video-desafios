@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    background-color: rgb(84, 150, 189);
+    font-size: 20px;
+}
+
+
+.content header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+.content header h1 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.486);
+    font-size: 40px;
+}
+
+.content main {
+    background-color:white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.39);
+}
+
+.content main .input {
+    display: flex;
+    margin-top: 10px;
+    
+    margin-bottom: 10px;
+}
+
+.content main .input input {
+    flex: 1;
+    margin-left: 15px;
+    background: rgba(137, 43, 226, 0.253);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    padding: 10px;
+}
+
+.content main .input button, .content main .analise button  {
+    background-color: rgb(84, 150, 189);
+    border: none;
+    width: 100px;
+    padding: 4px;
+    height: 40px;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content main .input button:hover {
+    background-color: rgb(30, 147, 214);
+
+}
+
+.content main .analise {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+.content main .analise select {
+    width: 40%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+.content main .analise .button {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.content main .analise button {
+    border-radius: 8px;
+    height: 50px;
+    font-size: large;
+    width: 120px;
+
+
+}
+
+.content main .analise button:hover {
+    background-color: rgb(30, 147, 214);
+}
+
+main .resultado {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+main .resultado p {
+    margin-bottom: 10px;
+    
+}
+
+.content footer {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+ 

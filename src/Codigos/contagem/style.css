@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(99, 99, 196);
+}
+
+#titulo {
+    text-align: center;
+    font: bolder arial;
+    font-size: 40px;
+    color: white;
+}
+
+section {
+    font-size: 20px;
+    background: white;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.26);
+    padding: 30px 10px 2px 20px;
+    margin: auto;
+}
+
+#inicio, #fim, #passo{
+    margin-bottom: 20px;
+}
+
+#resultado {
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+

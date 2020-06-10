@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Verificador de Idade</title>
+        <link rel="stylesheet" href="styleIdade.css">
+    </head>
+    <body>
+        <header>
+            <h1>Verificador de Idade</h1>
+        </header>
+        <section>
+            <div id ="form">
+                <label for="ano" id = "ano">
+                    Ano de Nascimento:
+                    <input type="number" name="ano" id="nascimento" min = "0">
+                </label>
+                <br>
+                <label for="sexo" id = "sexo">
+                    Sexo:
+                    <input type="radio" id = "male" name = "gender" value = "male" checked> 
+                    <label for="male">Masculino</label> 
+                    <input type="radio" id = "female" name = "gender" value = "female">  
+                    <label for="female">Feminino</label>
+                </label>
+                <br>
+                <button id = "botao" onclick="executarForm()">Verificar</button>
+                <p id = "resultado">Preencha os dados acima para ver o resultado!</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Curso em Vídeo</p>
+        </footer>
+        <script src = "scriptIdade.js"></script>
+    </body>
+</html>
