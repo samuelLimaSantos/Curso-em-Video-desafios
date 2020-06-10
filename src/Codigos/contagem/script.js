@@ -1,44 +1,54 @@
-function iteracao(passo) {
-    resultado.innerHTML = `Contando: <br>`;
-    
-        if (Number(inicio.value) > Number(fim.value)) {
-        
-            for (i = Number(inicio.value); i >= Number(fim.value); i -= passo) {
-                resultado.innerHTML += `${i} 👉 `;
-            }    
-        } else {
-            for (i = Number(inicio.value); i <= Number(fim.value); i += passo) {
-                resultado.innerHTML += `${i} 👉 `;    
-            }
-        } 
+/**Declaração de elementos que serão manipulados */
 
-        resultado.innerHTML += ` 🏁`;
-}
+const button = document.querySelector(".button button");
+const inicioElement = document.querySelector("input[name = inicio]");
+const fimElement = document.querySelector("input[name = fim]");
+const passoElement = document.querySelector("input[name = passo]");
+const resultadoContainer = document.querySelector(".resultado");
 
-function contagem() {
-    let inicio = document.querySelector("#inicio").value;
-    let fim = document.querySelector("#fim").value;
-    let passo = document.querySelector("#passo").value;
-    let resultado = document.querySelector("#resultado");
+button.addEventListener("click", () => {
+    // validações
+    let inicioValue = inicioElement.value;
+    let fimValue = fimElement.value;
+    let passoValue = passoElement.value;
 
-
-    if (!Number(inicio) || !Number(fim)) {
-        resultado.innerHTML = `Operação inválida! Preencha todos os campos!`;
-    } else if (Number(passo) == 0) {
-        alert(`Passo inválido! Considerando passo como 1!`)
-        iteracao(1)
+    if (inicioValue == "" || fimValue == "") {
+        resultadoContainer.innerHTML = `Operação inválida! Preencha todos os campos!`;
+    } else if (passoValue == 0) {
+        alert(`Passo inválido! Considerando passo como 1!`);
+        iteracao(inicioValue, fimValue, 1);
     } else {
-        iteracao(Number(passo));
+        iteracao(inicioValue, fimValue, passoValue);
         
     }
-
-}
     
-let button = document.querySelector("#botao");
-button.onclick = contagem;
 
-document.addEventListener("keyup", event = (event) => {
-    if (event.keyCode === 13) {
-        contagem();
-    }
-})
+
+
+
+});
+
+
+function iteracao(inicio, fim, passo) {
+    // Função responsável por fazer a contagem e adicioná-la no resultado
+    inicioNumber = Number(inicio);
+    fimNumber = Number(fim);
+    passoNumber = Number(passo);
+
+    resultadoContainer.innerHTML = `Contando: <br>`;
+    
+    if (inicioNumber > fimNumber) {
+        for (i = inicioNumber; i >= fimNumber; i -= passoNumber) {
+            resultadoContainer.innerHTML += `${i} 👉 `;
+        }    
+    } else {
+        for (i = inicioNumber; i <= fimNumber; i += passoNumber) {
+            resultadoContainer.innerHTML += `${i} 👉 `;    
+        }
+    } 
+
+        resultadoContainer.innerHTML += ` 🏁`;
+};
+
+    
+
