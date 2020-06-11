@@ -10,26 +10,30 @@
             <h1>Verificador de Idade</h1>
         </header>
         <section>
-            <div id ="form">
-                <label for="ano" id = "ano">
+            <div class ="form">
+                <label for="ano">
                     Ano de Nascimento:
-                    <input type="number" name="ano" id="nascimento" min = "0">
+                    <input type="number" name="ano" min = "0" placeholder="Digite o seu ano de nascimento">
                 </label>
                 <br>
-                <label for="sexo" id = "sexo">
+                <label for="sexo">
                     Sexo:
-                    <input type="radio" id = "male" name = "gender" value = "male" checked> 
+                    <input type="radio" class = "male" name = "gender" value = "male" checked> 
                     <label for="male">Masculino</label> 
-                    <input type="radio" id = "female" name = "gender" value = "female">  
+                    <input type="radio" class = "female" name = "gender" value = "female">  
                     <label for="female">Feminino</label>
                 </label>
                 <br>
-                <button id = "botao" onclick="executarForm()">Verificar</button>
-                <p id = "resultado">Preencha os dados acima para ver o resultado!</p>
+                <div class="button">
+                    <button onclick="executarForm()">Verificar</button>
+                </div>
+                <div class="result">
+                    <p class = "resultado">Preencha os dados acima para ver o resultado!</p>
+                </div>
             </div>
         </section>
         <footer>
-            <p>&copy; Curso em Vídeo</p>
+            <p>&copy; Samuel Santos</p>
         </footer>
         <script src = "scriptIdade.js"></script>
     </body>

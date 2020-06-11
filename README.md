@@ -14,3 +14,13 @@
     - Esse programa foi criado com intuíto de colocar em prática os conhecimentos de manipulação do DOM em conjunto com validações de hipóteses e iterações.
     - No programa o usuário insere um número de início, fim e um número de contador.
     - O output geração é uma contagem de início ao fim.
+
+3. Desafio #3 idade: 
+
+    - Esse programa foi criado no intuíto de colocar em prática a manipulação de elementos da DOM, assim como validações envolvendo condicionais.
+    - No programa o usuário digita o seu ano de nascimento e seleciona o seu sexo, o programa retorna o calculo da idade junto com uma foto.
+
+4. Desafio #4 tabuda:
+
+    - Esse programa foi criado com intuíto de colocar em prática a manipulação de elementos DOM com a utilização de repetições.
+    - No programa o usuário digita um número e é mostrado a tabuada desse número. Caso o usuário aperte em alguma option, a fórmula aparece maior ao lado.

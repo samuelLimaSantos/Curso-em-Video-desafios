@@ -1,20 +1,81 @@
 body {
     background: rgb(96, 124, 202);
+    width: 100vw;
+    height: 100vh;
 }
 
 header, h1 {
     text-align: center;
     color: white;
     font-size: 35px;
+    text-shadow: 5px 3px 2px rgba(0, 0, 0, 0.226);
 }
 
-#form {
-    background: white;
-    border-radius: 10px;
-    padding: 20px 20px 1px 20px;
-    margin: auto;
-    width: 500px;
+section {
+    width: 50%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.274);
+    padding: 15px;
+}
+
+.form label {
+    font-size: 16pt;
+    margin-bottom: 15px;
+}
+
+.form label[for = ano]{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form label input[name = ano] {
+    flex: 1;
+    margin-left: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.397);
+    padding: 8px;
+    color: white;
+    font-weight: bolder;
+    outline: none;
     
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button button {
+    color:  white;
+    font-size: 16pt;
+    border: none;
+    border-radius: 8px;
+    background-color: gray;
+    padding: 10px;
+    font-weight: bold;
+    outline: none;
+}
+
+.button button:hover {
+    color: gray;
+    border: 1px solid gray;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16pt;
 }
 
 footer {

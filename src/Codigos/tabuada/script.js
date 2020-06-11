@@ -1,40 +1,40 @@
 function visual(pos) {
     let option = document.getElementsByTagName("option")[pos];
     let valor = option.value;
-    var visual = document.querySelector("#visual");
+    var visual = document.querySelector(".visual");
 
     visual.innerHTML = valor;
 }
 
 
 function gerarTabuada() {
-    let numero = document.querySelector("#numero");
-    let resultado = document.querySelector("#select");
-    let titulo = document.querySelector("#resultado");
+    const numeroValue = document.querySelector("input[name=numero]").value;
+    const resultBloc = document.querySelector("#select");
+    const titulo = document.querySelector(".resultado");
     
-    if (numero.value == "") {
+    if (numeroValue == "") {
         alert(`Preencha o número`);
     } else {
-        var visual = document.querySelector("#visual");
-        visual.innerHTML = "";
+        const visualElement = document.querySelector(".visual");
+        visualElement.innerHTML = "";
         
-        resultado.innerHTML = "";
-        titulo.innerHTML = `Tabuada de ${numero.value}: <br>`;
+        resultBloc.innerHTML = "";
+        titulo.innerHTML = `Tabuada de ${numeroValue}: <br>`;
         for (i = 0; i <= 10; i++) {
             
             let optionElement = document.createElement("option");
             optionElement.setAttribute("id", i)
             optionElement.setAttribute("onclick", "visual("+ i +")");
             
-            optionElement.innerHTML += `${Number(numero.value)} * ${i} = ${Number(numero.value) * i} <br>`;
-            resultado.appendChild(optionElement);
+            optionElement.innerHTML += `${Number(numeroValue)} * ${i} = ${Number(numeroValue) * i} <br>`;
+            resultBloc.appendChild(optionElement);
         }
     }
 }
     
 
-var botao = document.querySelector("#botao");
-botao.onclick = gerarTabuada;
+const buttonElement = document.querySelector("#botao");
+buttonElement.onclick = gerarTabuada;
 
 document.addEventListener("keyup", event = (event) => {
     if (event.keyCode === 13) {
